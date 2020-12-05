@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link'
 import styles from '../styles/Home.module.css';
+import { motion } from 'framer-motion'
 
 export default function product() {
   const { 
@@ -8,9 +9,14 @@ export default function product() {
   } = useRouter();
   return (
     <div className={styles.container}>
-      <h1>{product}</h1>
+      <h1 className={styles.h1}>{product}</h1>
       <figure className={styles['thumbnail-wrapper']}>
-        <img src={product + '.jpg'} className={styles['product-thumbnail']} alt={product + 'の画像'} />
+        <motion.img 
+          layoutId={product}
+          src={product + '.jpg'} 
+          className={styles['product-thumbnail']} 
+          alt={product + 'の画像'} 
+        />
       </figure>
       <p className={styles['textlink']}>
         <Link href="/">

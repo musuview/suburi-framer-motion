@@ -7,6 +7,11 @@
   align-items: center;
 }
 
+.h1 {
+  font-size: 32px;
+  color: #444;
+}
+
 .thumbnail-wrapper {
   max-width: 980px;
   margin-left: auto;
@@ -19,7 +24,24 @@
   width: 237px;
   height: 237px;
   object-fit: cover;
+  margin-top: 64px;
+  margin-bottom: 64px;
 }
+
+.item-color {
+  visibility: visible;
+  text-align: center;
+}
+
+.thumbnail-link {
+  display: block;
+}
+@media (hover:hover) {
+  .thumbnail-link {
+    cursor: pointer;
+  } 
+}
+
 
 .product-thumbnail {
   width: 450px;
@@ -28,6 +50,7 @@
 }
 
 .textlink {
+  margin-top: 40px;
   font-size: 16px;
   color: cornflowerblue;
   text-decoration: underline;
